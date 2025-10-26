@@ -27,9 +27,9 @@ const HowItWorks = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 rounded-full bg-success/10 text-success text-sm font-medium mb-6 border border-success/20">
+          {/* <div className="inline-block px-4 py-2 rounded-full bg-success/10 text-success text-sm font-medium mb-6 border border-success/20">
             Simple Process
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
             How It Works
           </h2>
@@ -40,7 +40,7 @@ const HowItWorks = () => {
 
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto relative">
           {/* Connection lines */}
-          <div className="hidden md:block absolute top-20 left-[16.66%] right-[16.66%] h-0.5 bg-gradient-to-r from-primary via-accent to-success"></div>
+         
           
           {steps.map((step, index) => {
             const Icon = step.icon;
