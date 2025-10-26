@@ -1,75 +1,84 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
+    <section className="relative min-h-[90vh] flex items-center px-4 overflow-hidden">
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background"></div>
       
-      <div className="container relative">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Trust badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card mb-8">
-            <div className="h-2 w-2 rounded-full bg-success animate-pulse"></div>
-            <span className="text-sm text-muted-foreground">
-              Trusted by 500+ brokers worldwide
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px]"></div>
+      
+      {/* Glowing orbs */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+      
+      <div className="container mx-auto relative z-10">
+        <div className="max-w-5xl mx-auto">
+          {/* Trust Badge */}
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 text-primary text-sm font-medium mb-8 shadow-lg shadow-primary/10">
+            <span className="flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
+            Trusted by 500+ brokers worldwide
           </div>
 
-          {/* Main headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            All-in-one CRM & Traderroom for{" "}
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
-              modern FX brokers
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-[1.1]">
+            <span className="text-foreground">Enterprise-Grade </span>
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
+              Broker Technology
             </span>
+            <br />
+            <span className="text-foreground">Platform</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Onboard faster, manage smarter. Enterprise-grade platform with low-latency execution, 
-            comprehensive risk controls, and seamless integrations.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl leading-relaxed">
+            Complete CRM, Traderroom, and Risk Management suite built for modern forex brokers. 
+            <span className="text-foreground font-semibold"> Launch in days, not months.</span>
           </p>
 
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent-hover text-accent-foreground shadow-accent group"
-            >
-              Request a Demo
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-border hover:bg-muted"
-            >
-              <Play className="mr-2 h-4 w-4" />
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+            <Button size="lg" className="text-base px-8 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all">
               Watch Overview
+            </Button>
+            <Button size="lg" variant="outline" className="text-base px-8 border-border hover:border-primary/50 transition-all">
+              Explore Modules
             </Button>
           </div>
 
-          {/* Trust logos */}
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">
-              Integrated with
-            </div>
-            {["MetaTrader", "cTrader", "LMAX", "Currenex", "PrimeXM"].map((name) => (
-              <div 
-                key={name}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {name}
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-border/50">
+            {[
+              { label: "Active Brokers", value: "500+" },
+              { label: "Daily Trades", value: "2M+" },
+              { label: "Uptime", value: "99.9%" },
+              { label: "Countries", value: "120+" }
+            ].map((stat) => (
+              <div key={stat.label} className="text-center md:text-left">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl translate-y-1/2 translate-x-1/2"></div>
+      
+      <style>{`
+        @keyframes gradient {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        .animate-gradient {
+          background-size: 200% auto;
+          animation: gradient 3s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };

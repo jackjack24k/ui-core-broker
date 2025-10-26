@@ -1,61 +1,75 @@
-import { ArrowRight } from "lucide-react";
-
-const steps = [
-  {
-    number: "01",
-    title: "Onboard & Configure",
-    description: "Set up your broker environment in minutes. Configure branding, trading parameters, and compliance rules.",
-  },
-  {
-    number: "02",
-    title: "Connect Liquidity",
-    description: "Integrate with your preferred LPs and bridges. Configure routing, spreads, and execution logic.",
-  },
-  {
-    number: "03",
-    title: "Launch & Scale",
-    description: "Go live with your branded platform. Monitor performance, manage risk, and scale operations seamlessly.",
-  },
-];
+import { UserPlus, Link2, Rocket } from "lucide-react";
 
 const HowItWorks = () => {
-  return (
-    <section className="py-24 bg-gradient-hero text-primary-foreground relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}></div>
-      </div>
+  const steps = [
+    {
+      icon: UserPlus,
+      title: "Onboard",
+      description: "Sign up and configure your broker instance in minutes with guided setup."
+    },
+    {
+      icon: Link2,
+      title: "Connect LPs",
+      description: "Integrate with top liquidity providers and trading platforms seamlessly."
+    },
+    {
+      icon: Rocket,
+      title: "Launch",
+      description: "Go live with a fully branded brokerage platform ready for clients."
+    }
+  ];
 
-      <div className="container relative">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+  return (
+    <section className="py-32 px-4 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/50 to-background"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[128px]"></div>
+      
+      <div className="container mx-auto relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-block px-4 py-2 rounded-full bg-success/10 text-success text-sm font-medium mb-6 border border-success/20">
+            Simple Process
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
             How It Works
           </h2>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            From setup to launch in days, not months
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Get your brokerage up and running in three simple steps. No technical expertise required.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <div className="text-6xl font-bold text-accent mb-4 opacity-20">
-                {step.number}
+        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto relative">
+          {/* Connection lines */}
+          <div className="hidden md:block absolute top-20 left-[16.66%] right-[16.66%] h-0.5 bg-gradient-to-r from-primary via-accent to-success"></div>
+          
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            return (
+              <div key={index} className="relative">
+                <div className="text-center group">
+                  {/* Glowing number badge */}
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-xl font-bold text-primary-foreground shadow-lg shadow-primary/30 z-10">
+                    {index + 1}
+                  </div>
+                  
+                  {/* Icon container */}
+                  <div className="mb-8 inline-flex p-8 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border group-hover:border-primary/50 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-500 group-hover:-translate-y-2 relative overflow-hidden">
+                    {/* Animated background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-accent/0 group-hover:from-primary/10 group-hover:to-accent/10 transition-all duration-500"></div>
+                    
+                    <Icon size={48} className="text-primary relative z-10 group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-semibold mb-3">
-                {step.title}
-              </h3>
-              <p className="text-primary-foreground/70">
-                {step.description}
-              </p>
-              
-              {index < steps.length - 1 && (
-                <ArrowRight className="hidden md:block absolute top-12 -right-8 text-accent/50" size={32} />
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
