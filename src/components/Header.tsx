@@ -6,11 +6,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Products", href: "#products" },
-    { name: "Integrations", href: "#integrations" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Docs", href: "#docs" },
-    { name: "Company", href: "#company" },
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/#products" },
+    { name: "Services", href: "/services" },
+    { name: "Company", href: "/#company" },
   ];
 
   return (
@@ -35,12 +34,6 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost">Login</Button>
-          <Button className="bg-accent hover:bg-accent-hover text-accent-foreground">
-            Request Demo
-          </Button>
-        </div>
 
         <button
           className="md:hidden text-foreground"
@@ -63,12 +56,6 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <div className="flex flex-col gap-2 pt-2">
-              <Button variant="ghost" className="w-full">Login</Button>
-              <Button className="w-full bg-accent hover:bg-accent-hover text-accent-foreground">
-                Request Demo
-              </Button>
-            </div>
           </div>
         </div>
       )}
