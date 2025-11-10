@@ -137,25 +137,27 @@ const Header = () => {
                 Products
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-[320px]">
-                {products.map((product) => {
-                  const Icon = product.icon;
-                  return (
-                    <DropdownMenuItem key={product.name} asChild>
-                      <a href={product.href} className="flex items-start gap-3 p-3 cursor-pointer">
-                        <div className="mt-0.5">
-                          <Icon className="h-5 w-5 text-primary" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="font-medium text-foreground">{product.name}</div>
-                          <div className="text-xs text-muted-foreground mt-0.5">
-                            {product.description}
+              <DropdownMenuContent align="start" className="w-[800px] p-4">
+                <div className="grid grid-cols-3 gap-2">
+                  {products.map((product) => {
+                    const Icon = product.icon;
+                    return (
+                      <DropdownMenuItem key={product.name} asChild>
+                        <a href={product.href} className="flex items-start gap-3 p-3 cursor-pointer rounded-lg hover:bg-accent/50 transition-all">
+                          <div className="mt-0.5">
+                            <Icon className="h-5 w-5 text-primary" />
                           </div>
-                        </div>
-                      </a>
-                    </DropdownMenuItem>
-                  );
-                })}
+                          <div className="flex-1">
+                            <div className="font-medium text-foreground text-sm">{product.name}</div>
+                            <div className="text-xs text-muted-foreground mt-0.5 line-clamp-2">
+                              {product.description}
+                            </div>
+                          </div>
+                        </a>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </div>
               </DropdownMenuContent>
             </DropdownMenu>
 
