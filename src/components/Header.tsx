@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, LayoutDashboard, TrendingUp, Copy, Users, Smartphone, Gift } from "lucide-react";
+import {
+  Menu, X, ChevronDown, LayoutDashboard, Globe, Droplet, Building2,
+  Shield, Wrench, MessageSquare, FileCheck, Copy, Server, Cog,
+  Users, Wallet, BarChart3, MonitorSmartphone
+} from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,40 +24,94 @@ const Header = () => {
 
   const products = [
     {
-      name: "CRM & Client Portal",
-      description: "Complete client lifecycle management from onboarding to retention.",
+      name: "Forex CRM",
+      description: "Streamlined CRM solutions tailored for forex brokers.",
       icon: LayoutDashboard,
-      href: "/products/crm",
+      href: "/products/forex-crm",
     },
     {
-      name: "Traderroom",
-      description: "Real-time trading interface with advanced charting and order management.",
-      icon: TrendingUp,
-      href: "/products/traderroom",
+      name: "Forex Webdesign",
+      description: "Custom forex websites built to convert.",
+      icon: Globe,
+      href: "/products/forex-webdesign",
     },
     {
-      name: "Copy Trading",
-      description: "Turn top traders into products with automated follower management.",
+      name: "Forex Liquidity",
+      description: "Connect with top-tier liquidity providers.",
+      icon: Droplet,
+      href: "/products/forex-liquidity",
+    },
+    {
+      name: "Prop Firm CRM",
+      description: "CRM system tailored for proprietary firms.",
+      icon: Building2,
+      href: "/products/prop-firm-crm",
+    },
+    {
+      name: "Risk Management",
+      description: "Tools to monitor and control trading risk.",
+      icon: Shield,
+      href: "/products/risk-management",
+    },
+    {
+      name: "Custom Tools",
+      description: "Bespoke tools tailored to your operations.",
+      icon: Wrench,
+      href: "/products/custom-tools",
+    },
+    {
+      name: "Consulting",
+      description: "Expert advice tailored for your growth path.",
+      icon: MessageSquare,
+      href: "/products/consulting",
+    },
+    {
+      name: "Regulations",
+      description: "Reliable Regulations for uninterrupted trading.",
+      icon: FileCheck,
+      href: "/products/regulations",
+    },
+    {
+      name: "Forex Copier",
+      description: "Instantly copy trades across accounts.",
       icon: Copy,
-      href: "/products/copy-trading",
+      href: "/products/forex-copier",
     },
     {
-      name: "Prop Funding",
-      description: "Capital allocation, P&L waterfalls, and risk controls for prop firms.",
+      name: "Dedicated Server",
+      description: "High-speed, secure servers for MT4/MT5 hosting.",
+      icon: Server,
+      href: "/products/dedicated-server",
+    },
+    {
+      name: "Backend Solutions",
+      description: "Custom admin panels and integration tools.",
+      icon: Cog,
+      href: "/products/backend-solutions",
+    },
+    {
+      name: "Social Trading",
+      description: "Enable trade sharing and follower systems.",
       icon: Users,
-      href: "/products/prop-funding",
+      href: "/products/social-trading",
     },
     {
-      name: "Trading App",
-      description: "Native mobile experience for iOS and Android with real-time sync.",
-      icon: Smartphone,
-      href: "/products/trading-app",
+      name: "PAMM/MAMM",
+      description: "Multi-account management made easy.",
+      icon: Wallet,
+      href: "/products/pamm-mamm",
     },
     {
-      name: "Bonus Manager",
-      description: "Flexible bonus rules, tiers, and automated payout schedules.",
-      icon: Gift,
-      href: "/products/bonus-manager",
+      name: "Reporting Tools",
+      description: "Advanced analytics for brokers and traders.",
+      icon: BarChart3,
+      href: "/products/reporting-tools",
+    },
+    {
+      name: "VPS Hosting",
+      description: "Reliable VPS for uninterrupted trading.",
+      icon: MonitorSmartphone,
+      href: "/products/vps-hosting",
     },
   ];
 

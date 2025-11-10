@@ -41,13 +41,13 @@ const Modules = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6 border border-accent/20">
+          <div className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6 border border-accent/20 animate-fade-in-up">
             Modular Architecture
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             Complete Product Suite
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             Every module you need to run a modern brokerage, fully integrated and ready to deploy.
           </p>
         </div>
@@ -56,21 +56,26 @@ const Modules = () => {
           {modules.map((module, index) => {
             const Icon = module.icon;
             return (
-              <div 
+              <div
                 key={index}
-                className="group relative p-8 rounded-2xl bg-card border border-border hover:border-accent/50 transition-all duration-500 cursor-pointer overflow-hidden"
+                className="group relative p-8 rounded-2xl bg-card border border-border hover:border-accent/50 transition-all duration-500 cursor-pointer overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/10 animate-fade-in-up"
+                style={{ animationDelay: `${300 + index * 100}ms` }}
               >
                 {/* Animated background gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:via-primary/5 group-hover:to-transparent transition-all duration-700"></div>
-                
+
                 {/* Shine effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-primary/10 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 </div>
-                
+
+                {/* Floating particles */}
+                <div className="absolute top-6 right-6 w-2 h-2 rounded-full bg-accent/40 animate-float"></div>
+                <div className="absolute bottom-10 left-8 w-1.5 h-1.5 rounded-full bg-primary/40 animate-float" style={{ animationDelay: '1.5s' }}></div>
+
                 <div className="relative">
-                  <div className="mb-6 inline-flex p-5 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-500 group-hover:scale-110">
-                    <Icon size={32} strokeWidth={2} />
+                  <div className="mb-6 inline-flex p-5 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <Icon size={32} strokeWidth={2} className="group-hover:animate-pulse" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
                     {module.title}

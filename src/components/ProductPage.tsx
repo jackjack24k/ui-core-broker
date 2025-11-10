@@ -11,7 +11,7 @@ interface Feature {
 
 interface Integration {
   name: string;
-  logo: string;
+  icon: LucideIcon;
   description: string;
 }
 
@@ -51,25 +51,30 @@ const ProductPage = ({
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background"></div>
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex p-4 rounded-2xl bg-primary/10 text-primary mb-6">
-              <HeroIcon size={48} />
+            <div className="inline-flex p-4 rounded-2xl bg-primary/10 text-primary mb-6 animate-fade-in-up">
+              <HeroIcon size={48} className="animate-float" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent animate-fade-in-up animation-delay-100">
               {title}
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium animate-fade-in-up animation-delay-200">
               {subtitle}
             </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-in-up animation-delay-300">
               {description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
+              <Button size="lg" className="text-lg px-8 group hover:scale-105 transition-transform">
+                Get Started <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
+              <Button size="lg" variant="outline" className="text-lg px-8 hover:scale-105 transition-transform">
                 Schedule Demo
               </Button>
             </div>
@@ -93,14 +98,15 @@ const ProductPage = ({
               return (
                 <div
                   key={index}
-                  className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                  className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                       <Icon size={24} />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-2 text-card-foreground">
+                      <h3 className="text-xl font-semibold mb-2 text-card-foreground group-hover:text-primary transition-colors">
                         {feature.title}
                       </h3>
                       <p className="text-muted-foreground">
@@ -128,24 +134,28 @@ const ProductPage = ({
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {integrations.map((integration, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-card border border-border hover:border-accent transition-all duration-300 group"
-              >
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center text-white font-bold text-lg">
-                    {integration.logo}
+            {integrations.map((integration, index) => {
+              const IntegrationIcon = integration.icon;
+              return (
+                <div
+                  key={index}
+                  className="p-6 rounded-xl bg-card border border-border hover:border-accent transition-all duration-500 group hover:shadow-lg hover:-translate-y-1 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                      <IntegrationIcon size={24} />
+                    </div>
+                    <h3 className="text-lg font-semibold text-card-foreground group-hover:text-accent transition-colors">
+                      {integration.name}
+                    </h3>
                   </div>
-                  <h3 className="text-lg font-semibold text-card-foreground">
-                    {integration.name}
-                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {integration.description}
+                  </p>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  {integration.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -168,12 +178,13 @@ const ProductPage = ({
               return (
                 <div
                   key={index}
-                  className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group"
+                  className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 group hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-2 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 75}ms` }}
                 >
-                  <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                     <Icon size={28} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-card-foreground">
+                  <h3 className="text-xl font-semibold mb-3 text-card-foreground group-hover:text-primary transition-colors">
                     {solution.title}
                   </h3>
                   <p className="text-muted-foreground">

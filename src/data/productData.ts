@@ -1,21 +1,26 @@
 import {
   LayoutDashboard,
-  TrendingUp,
+  Globe,
+  Droplet,
+  Building2,
+  Shield,
+  Wrench,
+  MessageSquare,
+  FileCheck,
   Copy,
+  Server,
+  Cog,
   Users,
-  Smartphone,
-  Gift,
+  Wallet,
+  BarChart3,
+  MonitorSmartphone,
   UserCheck,
   FileText,
   Bell,
-  Shield,
-  BarChart3,
   Zap,
   LineChart,
-  Wallet,
   Settings,
   Lock,
-  Globe,
   RefreshCw,
   Target,
   Award,
@@ -27,642 +32,1263 @@ import {
   Cloud,
   Database,
   Code,
-  Smartphone as Mobile,
-  Tablet,
-  Monitor,
-  Calendar,
-  CreditCard,
-  Percent,
-  TrendingDown,
+  TrendingUp,
+  CheckCircle2,
+  Briefcase,
+  HeadphonesIcon,
+  BookOpen,
+  Rocket,
+  GitBranch,
+  Package,
+  Smartphone,
 } from "lucide-react";
 
-// CRM & Client Portal Data
-export const crmData = {
-  title: "CRM & Client Portal",
-  subtitle: "Complete Client Lifecycle Management",
+// Forex CRM Data
+export const forexCrmData = {
+  title: "Forex CRM",
+  subtitle: "Streamlined CRM Solutions for Forex Brokers",
   description:
-    "Streamline your entire client journey from onboarding to retention with our comprehensive CRM and client portal solution. Automate workflows, manage documents, and deliver exceptional client experiences.",
+    "Complete client lifecycle management tailored specifically for forex brokers. Manage clients, automate workflows, track performance, and deliver exceptional experiences with our comprehensive CRM solution.",
   heroIcon: LayoutDashboard,
   keyFeatures: [
     {
-      title: "Multi-Tiered Onboarding",
+      title: "Client Management",
       description:
-        "Automated KYC/AML verification with document management, risk assessment, and compliance checks. Support for individual, corporate, and institutional accounts.",
+        "Comprehensive client database with KYC/AML verification, document management, and multi-tier account support for retail and institutional clients.",
       icon: UserCheck,
     },
     {
-      title: "Document Management",
+      title: "Automated Workflows",
       description:
-        "Secure document storage, e-signature integration, automated document generation, and compliance tracking with audit trails.",
-      icon: FileText,
-    },
-    {
-      title: "Client Communication Hub",
-      description:
-        "Multi-channel notifications (email, SMS, push), in-app messaging, announcement system, and personalized communication templates.",
-      icon: Bell,
-    },
-    {
-      title: "Advanced Reporting",
-      description:
-        "Real-time analytics dashboards, custom report builder, client activity tracking, and performance metrics with exportable data.",
-      icon: BarChart3,
-    },
-  ],
-  integrations: [
-    {
-      name: "MetaTrader 4/5",
-      logo: "MT",
-      description: "Full integration with MT4/MT5 platforms for seamless account management and trading.",
-    },
-    {
-      name: "cTrader",
-      logo: "CT",
-      description: "Native cTrader integration for advanced trading capabilities and account synchronization.",
-    },
-    {
-      name: "Sumsub",
-      logo: "SS",
-      description: "Automated KYC/AML verification with AI-powered identity verification and fraud detection.",
-    },
-    {
-      name: "Onfido",
-      logo: "ON",
-      description: "Document verification and biometric authentication for secure client onboarding.",
-    },
-    {
-      name: "Salesforce",
-      logo: "SF",
-      description: "CRM synchronization for enterprise-level client relationship management.",
-    },
-    {
-      name: "HubSpot",
-      logo: "HS",
-      description: "Marketing automation and lead management integration for client acquisition.",
-    },
-  ],
-  advancedSolutions: [
-    {
-      title: "Multi-Broker Aggregation",
-      description:
-        "Manage multiple broker entities from a single dashboard with consolidated reporting and cross-entity client transfers.",
-      icon: Layers,
-    },
-    {
-      title: "Risk Management Tools",
-      description:
-        "Real-time exposure monitoring, automated risk alerts, position limits, and margin call management.",
-      icon: Shield,
-    },
-    {
-      title: "White-Label Customization",
-      description:
-        "Fully customizable branding, custom domains, personalized email templates, and branded mobile apps.",
-      icon: Globe,
-    },
-    {
-      title: "IB Management System",
-      description:
-        "Multi-tier IB structure, commission tracking, performance analytics, and automated payouts.",
-      icon: Users,
-    },
-    {
-      title: "Client Segmentation",
-      description:
-        "Advanced client categorization, behavioral analytics, targeted campaigns, and personalized experiences.",
-      icon: Target,
-    },
-    {
-      title: "Compliance Automation",
-      description:
-        "Regulatory reporting, audit trails, automated compliance checks, and jurisdiction-specific rules.",
-      icon: Lock,
-    },
-  ],
-};
-
-// Traderroom Data
-export const traderroomData = {
-  title: "Traderroom",
-  subtitle: "Real-Time Trading Interface",
-  description:
-    "Empower your clients with a professional-grade trading interface featuring advanced charting, real-time market data, and sophisticated order management tools.",
-  heroIcon: TrendingUp,
-  keyFeatures: [
-    {
-      title: "Advanced Charting",
-      description:
-        "TradingView integration with 100+ technical indicators, drawing tools, multiple timeframes, and customizable chart layouts.",
-      icon: LineChart,
-    },
-    {
-      title: "Order Management",
-      description:
-        "One-click trading, advanced order types (limit, stop, trailing stop), bulk order management, and order templates.",
-      icon: Zap,
-    },
-    {
-      title: "Portfolio Analytics",
-      description:
-        "Real-time P&L tracking, position monitoring, risk metrics, performance analytics, and trade history.",
-      icon: PieChart,
-    },
-    {
-      title: "Market Data",
-      description:
-        "Real-time quotes, market depth, economic calendar, news feed integration, and price alerts.",
-      icon: Activity,
-    },
-  ],
-  integrations: [
-    {
-      name: "TradingView",
-      logo: "TV",
-      description: "Professional charting with advanced technical analysis tools and indicators.",
-    },
-    {
-      name: "MetaTrader Bridge",
-      logo: "MT",
-      description: "Seamless execution and account synchronization with MT4/MT5 platforms.",
-    },
-    {
-      name: "FIX Protocol",
-      logo: "FIX",
-      description: "Low-latency order routing and execution via industry-standard FIX protocol.",
-    },
-    {
-      name: "Market Data Feeds",
-      logo: "MD",
-      description: "Real-time market data from multiple liquidity providers and exchanges.",
-    },
-    {
-      name: "News APIs",
-      logo: "NW",
-      description: "Integrated news feeds from Reuters, Bloomberg, and other financial news sources.",
-    },
-    {
-      name: "Economic Calendar",
-      logo: "EC",
-      description: "Real-time economic events and indicators affecting market movements.",
-    },
-  ],
-  advancedSolutions: [
-    {
-      title: "Algorithmic Trading",
-      description:
-        "Strategy builder, backtesting engine, automated execution, and performance optimization tools.",
-      icon: Code,
-    },
-    {
-      title: "Social Trading Feed",
-      description:
-        "Share trades, follow top traders, community insights, and collaborative trading features.",
-      icon: Users,
-    },
-    {
-      title: "Risk Controls",
-      description:
-        "Position limits, margin requirements, stop-out levels, and automated risk management.",
-      icon: Shield,
-    },
-    {
-      title: "Multi-Asset Support",
-      description:
-        "Trade forex, commodities, indices, cryptocurrencies, and stocks from a single interface.",
-      icon: Layers,
-    },
-    {
-      title: "Custom Indicators",
-      description:
-        "Build and deploy custom technical indicators with JavaScript/Python support.",
-      icon: Settings,
-    },
-    {
-      title: "Performance Dashboard",
-      description:
-        "Comprehensive analytics, win rate tracking, drawdown analysis, and strategy performance metrics.",
-      icon: Gauge,
-    },
-  ],
-};
-
-// Copy Trading Data
-export const copyTradingData = {
-  title: "Copy Trading",
-  subtitle: "Turn Top Traders Into Products",
-  description:
-    "Enable your clients to follow and automatically copy successful traders. Build a thriving copy trading community with automated follower management and transparent performance tracking.",
-  heroIcon: Copy,
-  keyFeatures: [
-    {
-      title: "Strategy Marketplace",
-      description:
-        "Curated strategy listings, performance rankings, risk ratings, detailed statistics, and trader profiles.",
-      icon: Award,
-    },
-    {
-      title: "Automated Copying",
-      description:
-        "Real-time trade replication, proportional position sizing, customizable copy ratios, and stop-loss protection.",
+        "Streamline onboarding, verification, deposits, withdrawals, and compliance processes with intelligent automation and rule-based triggers.",
       icon: RefreshCw,
     },
     {
-      title: "Performance Tracking",
+      title: "Trading Analytics",
       description:
-        "Detailed analytics, historical performance, drawdown metrics, win rates, and risk-adjusted returns.",
+        "Real-time trading metrics, P&L tracking, volume analysis, and performance dashboards to monitor client activity and broker performance.",
       icon: BarChart3,
     },
     {
-      title: "Revenue Sharing",
+      title: "Multi-Platform Integration",
       description:
-        "Flexible commission structures, performance fees, subscription models, and automated payouts to strategy providers.",
+        "Seamless integration with MT4, MT5, cTrader, and other trading platforms. Sync accounts, trades, and balances in real-time.",
+      icon: Layers,
+    },
+  ],
+  integrations: [
+    {
+      name: "MT4/MT5 Integration",
+      description: "Direct integration with MetaTrader platforms for account management and trade synchronization.",
+      icon: Activity,
+    },
+    {
+      name: "Payment Gateways",
+      description: "Connect with major payment processors for deposits and withdrawals including cards, bank transfers, and crypto.",
+      icon: DollarSign,
+    },
+    {
+      name: "KYC/AML Providers",
+      description: "Automated identity verification and compliance checks with leading KYC/AML service providers.",
+      icon: Shield,
+    },
+    {
+      name: "CRM APIs",
+      description: "RESTful APIs for custom integrations, third-party tools, and automated workflows.",
+      icon: Code,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "IB Management",
+      description:
+        "Complete introducing broker program management with commission tracking, hierarchical structures, and automated payouts.",
+      icon: Users,
+    },
+    {
+      title: "Bonus Engine",
+      description:
+        "Flexible bonus rules, deposit bonuses, cashback programs, and automated bonus allocation with compliance controls.",
+      icon: Award,
+    },
+    {
+      title: "Risk Management",
+      description:
+        "Real-time risk monitoring, exposure tracking, margin call automation, and position limits to protect your brokerage.",
+      icon: Shield,
+    },
+    {
+      title: "Reporting Suite",
+      description:
+        "Comprehensive reports for compliance, finance, operations, and management with customizable dashboards and exports.",
+      icon: FileText,
+    },
+  ],
+};
+
+// Forex Webdesign Data
+export const forexWebdesignData = {
+  title: "Forex Webdesign",
+  subtitle: "Custom Forex Websites Built to Convert",
+  description:
+    "Professional, high-converting websites designed specifically for forex brokers. Modern designs, optimized user experience, and seamless integration with your trading platforms and CRM.",
+  heroIcon: Globe,
+  keyFeatures: [
+    {
+      title: "Conversion-Optimized Design",
+      description:
+        "Landing pages, registration flows, and user journeys designed to maximize conversions and client acquisition.",
+      icon: Target,
+    },
+    {
+      title: "Responsive & Mobile-First",
+      description:
+        "Fully responsive designs that work flawlessly on desktop, tablet, and mobile devices with optimized performance.",
+      icon: MonitorSmartphone,
+    },
+    {
+      title: "Multi-Language Support",
+      description:
+        "Built-in internationalization with support for multiple languages, currencies, and regional compliance requirements.",
+      icon: Globe,
+    },
+    {
+      title: "SEO Optimized",
+      description:
+        "Search engine optimized structure, fast loading times, and clean code to improve your organic search rankings.",
+      icon: Zap,
+    },
+  ],
+  integrations: [
+    {
+      name: "CRM Integration",
+      description: "Seamless connection with your forex CRM for client data, account management, and automated workflows.",
+      icon: LayoutDashboard,
+    },
+    {
+      name: "Trading Platform Widgets",
+      description: "Embedded trading widgets, live quotes, charts, and account dashboards from MT4/MT5 and other platforms.",
+      icon: LineChart,
+    },
+    {
+      name: "Payment Integration",
+      description: "Integrated deposit and withdrawal forms connected to your payment gateways and processors.",
+      icon: DollarSign,
+    },
+    {
+      name: "Analytics & Tracking",
+      description: "Google Analytics, conversion tracking, and custom event tracking for marketing optimization.",
+      icon: BarChart3,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Client Portal",
+      description:
+        "Secure client area with account management, trading history, deposits/withdrawals, and document uploads.",
+      icon: Lock,
+    },
+    {
+      title: "Educational Content",
+      description:
+        "Built-in blog, trading academy, webinar platform, and educational resources to engage and educate clients.",
+      icon: FileText,
+    },
+    {
+      title: "Marketing Tools",
+      description:
+        "Landing page builder, A/B testing, email capture forms, and conversion optimization tools.",
+      icon: Target,
+    },
+    {
+      title: "Performance Optimization",
+      description:
+        "CDN integration, image optimization, lazy loading, and caching for lightning-fast page loads.",
+      icon: Zap,
+    },
+  ],
+};
+
+
+// Forex Liquidity Data
+export const forexLiquidityData = {
+  title: "Forex Liquidity",
+  subtitle: "Connect with Top-Tier Liquidity Providers",
+  description:
+    "Access deep liquidity pools from multiple tier-1 providers. Competitive spreads, fast execution, and reliable connectivity to power your forex brokerage operations.",
+  heroIcon: Droplet,
+  keyFeatures: [
+    {
+      title: "Multi-Provider Aggregation",
+      description:
+        "Connect to multiple liquidity providers simultaneously for best price discovery and execution quality.",
+      icon: Layers,
+    },
+    {
+      title: "Ultra-Low Latency",
+      description:
+        "Co-located servers and optimized network infrastructure for sub-millisecond execution speeds.",
+      icon: Zap,
+    },
+    {
+      title: "Deep Liquidity Pools",
+      description:
+        "Access to institutional-grade liquidity with tight spreads and large order capacity across all major pairs.",
+      icon: Droplet,
+    },
+    {
+      title: "Smart Order Routing",
+      description:
+        "Intelligent order routing algorithms to ensure best execution and optimal fill rates for your clients.",
+      icon: Target,
+    },
+  ],
+  integrations: [
+    {
+      name: "MT4/MT5 Bridge",
+      description: "Direct bridge connectivity to MetaTrader platforms with real-time price feeds and order execution.",
+      icon: Activity,
+    },
+    {
+      name: "FIX Protocol",
+      description: "Industry-standard FIX API connectivity for institutional clients and custom trading applications.",
+      icon: Code,
+    },
+    {
+      name: "Prime of Prime",
+      description: "Access to prime of prime liquidity with competitive pricing and flexible credit terms.",
+      icon: Building2,
+    },
+    {
+      name: "Risk Management",
+      description: "Integrated risk controls, exposure monitoring, and automated hedging capabilities.",
+      icon: Shield,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Liquidity Aggregation",
+      description:
+        "Combine multiple liquidity sources with smart routing to achieve best prices and execution quality.",
+      icon: Layers,
+    },
+    {
+      title: "White Label Solutions",
+      description:
+        "Branded liquidity solutions with your company name and custom pricing markup configurations.",
+      icon: Award,
+    },
+    {
+      title: "Credit Line Management",
+      description:
+        "Flexible credit arrangements with multiple providers to support your trading volume and growth.",
+      icon: DollarSign,
+    },
+    {
+      title: "Analytics & Reporting",
+      description:
+        "Detailed execution analytics, slippage reports, and liquidity provider performance metrics.",
+      icon: BarChart3,
+    },
+  ],
+};
+
+// Prop Firm CRM Data
+export const propFirmCrmData = {
+  title: "Prop Firm CRM",
+  subtitle: "CRM System Tailored for Proprietary Firms",
+  description:
+    "Specialized CRM solution designed for prop trading firms. Manage traders, track performance, automate evaluations, and scale your prop firm operations efficiently.",
+  heroIcon: Building2,
+  keyFeatures: [
+    {
+      title: "Trader Management",
+      description:
+        "Complete trader lifecycle management from application to funded status with automated evaluation tracking.",
+      icon: Users,
+    },
+    {
+      title: "Challenge Automation",
+      description:
+        "Automated challenge creation, rule enforcement, and evaluation processes with customizable parameters.",
+      icon: Target,
+    },
+    {
+      title: "Performance Analytics",
+      description:
+        "Real-time trader performance metrics, risk analysis, and profitability tracking across all accounts.",
+      icon: BarChart3,
+    },
+    {
+      title: "Payout Management",
+      description:
+        "Automated profit split calculations, payout scheduling, and payment processing for funded traders.",
       icon: DollarSign,
     },
   ],
   integrations: [
     {
-      name: "MT4/MT5 Copy",
-      logo: "MT",
-      description: "Native MetaTrader integration for seamless copy trading execution.",
+      name: "Trading Platform Integration",
+      description: "Connect with MT4, MT5, and other platforms for real-time account monitoring and trade tracking.",
+      icon: Activity,
     },
     {
-      name: "cTrader Copy",
-      logo: "CT",
-      description: "cTrader copy trading with advanced risk management features.",
+      name: "Payment Processing",
+      description: "Integrated payment gateways for challenge fees, payouts, and subscription management.",
+      icon: Wallet,
     },
     {
-      name: "Payment Gateways",
-      logo: "PG",
-      description: "Automated commission payments via Stripe, PayPal, and crypto wallets.",
+      name: "Risk Management Tools",
+      description: "Automated risk controls, drawdown monitoring, and rule violation detection systems.",
+      icon: Shield,
     },
     {
-      name: "Analytics Engine",
-      logo: "AE",
-      description: "Advanced performance analytics and risk assessment algorithms.",
-    },
-    {
-      name: "Social Networks",
-      logo: "SN",
-      description: "Share strategies on social media and attract more followers.",
-    },
-    {
-      name: "Compliance Tools",
-      logo: "CP",
-      description: "Regulatory compliance for copy trading operations and disclosures.",
+      name: "Reporting & Analytics",
+      description: "Comprehensive reporting tools for trader performance, firm metrics, and financial analysis.",
+      icon: FileText,
     },
   ],
   advancedSolutions: [
     {
-      title: "Risk Management",
+      title: "Multi-Tier Challenges",
       description:
-        "Follower-level risk controls, maximum drawdown limits, equity protection, and automatic stop copying.",
-      icon: Shield,
-    },
-    {
-      title: "Strategy Verification",
-      description:
-        "Third-party verification, audited track records, real-time monitoring, and fraud detection.",
-      icon: Lock,
-    },
-    {
-      title: "Multi-Account Management",
-      description:
-        "PAMM/MAM functionality, master-slave account structure, and proportional allocation.",
+        "Create multiple challenge tiers with different rules, targets, and funding levels to attract diverse traders.",
       icon: Layers,
     },
     {
-      title: "Custom Algorithms",
+      title: "Automated Compliance",
       description:
-        "Build custom copy logic, filtering rules, entry/exit modifications, and risk adjustments.",
-      icon: Code,
+        "Rule enforcement, violation detection, and automated account actions based on trading behavior.",
+      icon: CheckCircle2,
     },
-    {
-      title: "Community Features",
-      description:
-        "Trader chat, strategy discussions, performance leaderboards, and social engagement tools.",
-      icon: Users,
-    },
-    {
-      title: "White-Label Platform",
-      description:
-        "Fully branded copy trading platform with custom domains and personalized user experience.",
-      icon: Globe,
-    },
-  ],
-};
-
-// Prop Funding Data
-export const propFundingData = {
-  title: "Prop Funding",
-  subtitle: "Capital Allocation & Risk Controls",
-  description:
-    "Launch and scale your proprietary trading firm with comprehensive capital allocation, P&L waterfalls, challenge management, and sophisticated risk controls for prop traders.",
-  heroIcon: Users,
-  keyFeatures: [
-    {
-      title: "Challenge Management",
-      description:
-        "Multi-phase evaluation programs, customizable challenge rules, automated progression, pass/fail criteria, and performance tracking.",
-      icon: Target,
-    },
-    {
-      title: "P&L Waterfalls",
-      description:
-        "Flexible profit split structures, tiered payout schedules, performance-based scaling, and automated calculations.",
-      icon: TrendingDown,
-    },
-    {
-      title: "Risk Controls",
-      description:
-        "Daily loss limits, maximum drawdown rules, position size limits, trading time restrictions, and automated account suspension.",
-      icon: Shield,
-    },
-    {
-      title: "Trader Analytics",
-      description:
-        "Comprehensive performance metrics, risk-adjusted returns, consistency scores, trading psychology insights, and behavioral analysis.",
-      icon: BarChart3,
-    },
-  ],
-  integrations: [
-    {
-      name: "MT4/MT5 Manager",
-      logo: "MT",
-      description: "Full integration with MetaTrader for account management and risk controls.",
-    },
-    {
-      name: "Payment Processors",
-      logo: "PP",
-      description: "Automated payouts via Stripe, Wise, PayPal, and cryptocurrency wallets.",
-    },
-    {
-      name: "KYC Providers",
-      logo: "KYC",
-      description: "Trader verification and compliance checks for funded accounts.",
-    },
-    {
-      name: "Analytics Platforms",
-      logo: "AP",
-      description: "Advanced trading analytics and performance measurement tools.",
-    },
-    {
-      name: "Discord/Slack",
-      logo: "DS",
-      description: "Community integration for trader communication and support.",
-    },
-    {
-      name: "Billing Systems",
-      logo: "BS",
-      description: "Subscription management for challenge fees and account renewals.",
-    },
-  ],
-  advancedSolutions: [
     {
       title: "Scaling Plans",
       description:
-        "Automated account scaling based on performance, progressive capital allocation, and milestone-based growth.",
+        "Automated account scaling based on trader performance with customizable growth parameters.",
       icon: TrendingUp,
-    },
-    {
-      title: "Custom Rule Engine",
-      description:
-        "Build custom trading rules, violation detection, automated enforcement, and flexible rule sets.",
-      icon: Settings,
-    },
-    {
-      title: "Trader Dashboard",
-      description:
-        "Real-time statistics, challenge progress, payout history, performance metrics, and goal tracking.",
-      icon: Gauge,
     },
     {
       title: "Affiliate Program",
       description:
-        "Multi-tier affiliate structure, commission tracking, promotional tools, and automated payouts.",
+        "Built-in affiliate management system with commission tracking and automated payouts.",
       icon: Users,
-    },
-    {
-      title: "Certificate System",
-      description:
-        "Automated certificate generation, achievement badges, trader rankings, and public profiles.",
-      icon: Award,
-    },
-    {
-      title: "Compliance Suite",
-      description:
-        "Regulatory compliance tools, audit trails, reporting systems, and jurisdiction-specific rules.",
-      icon: Lock,
     },
   ],
 };
 
-// Trading App Data
-export const tradingAppData = {
-  title: "Trading App",
-  subtitle: "Native Mobile Experience",
+
+// Risk Management Data
+export const riskManagementData = {
+  title: "Risk Management",
+  subtitle: "Tools to Monitor and Control Trading Risk",
   description:
-    "Deliver a premium mobile trading experience with native iOS and Android apps featuring real-time sync, advanced charting, and full trading functionality on the go.",
-  heroIcon: Smartphone,
+    "Comprehensive risk management solutions to protect your brokerage. Real-time monitoring, automated controls, and advanced analytics to manage exposure and ensure operational stability.",
+  heroIcon: Shield,
   keyFeatures: [
     {
-      title: "Native Performance",
+      title: "Real-Time Monitoring",
       description:
-        "Built with React Native for optimal performance, smooth animations, offline capabilities, and native device features.",
-      icon: Mobile,
+        "Live exposure tracking, position monitoring, and risk metrics across all accounts and trading platforms.",
+      icon: Gauge,
     },
     {
-      title: "Real-Time Sync",
+      title: "Automated Risk Controls",
       description:
-        "Instant synchronization across devices, real-time price updates, push notifications, and seamless account switching.",
-      icon: RefreshCw,
+        "Configurable risk limits, margin call automation, and position limits with instant enforcement.",
+      icon: Shield,
     },
     {
-      title: "Mobile Charting",
+      title: "Exposure Management",
       description:
-        "Touch-optimized charts, technical indicators, drawing tools, multiple timeframes, and gesture controls.",
-      icon: LineChart,
+        "Aggregate exposure analysis, hedging recommendations, and liquidity provider exposure tracking.",
+      icon: BarChart3,
     },
     {
-      title: "Biometric Security",
+      title: "Alert System",
       description:
-        "Face ID/Touch ID authentication, secure PIN protection, encrypted data storage, and session management.",
-      icon: Lock,
+        "Customizable alerts for risk thresholds, unusual activity, and compliance violations with multi-channel notifications.",
+      icon: Bell,
     },
   ],
   integrations: [
     {
-      name: "iOS App Store",
-      logo: "iOS",
-      description: "Native iOS app with full App Store compliance and TestFlight support.",
+      name: "Trading Platform Integration",
+      description: "Direct integration with MT4, MT5, and other platforms for real-time position and exposure data.",
+      icon: Activity,
     },
     {
-      name: "Google Play",
-      logo: "AND",
-      description: "Native Android app optimized for all Android devices and versions.",
+      name: "Liquidity Provider Feeds",
+      description: "Connect to LP systems for hedging automation and exposure management across providers.",
+      icon: Droplet,
     },
     {
-      name: "Push Notifications",
-      logo: "PN",
-      description: "Firebase Cloud Messaging for real-time alerts and notifications.",
+      name: "CRM Integration",
+      description: "Sync with your CRM for client risk profiles, account limits, and automated actions.",
+      icon: LayoutDashboard,
     },
     {
-      name: "Mobile Analytics",
-      logo: "MA",
-      description: "App analytics, user behavior tracking, and performance monitoring.",
-    },
-    {
-      name: "Crash Reporting",
-      logo: "CR",
-      description: "Automated crash detection and reporting for rapid issue resolution.",
-    },
-    {
-      name: "App Updates",
-      logo: "AU",
-      description: "Over-the-air updates and feature flag management for gradual rollouts.",
+      name: "Reporting Tools",
+      description: "Export risk reports, compliance documentation, and audit trails for regulatory requirements.",
+      icon: FileText,
     },
   ],
   advancedSolutions: [
     {
-      title: "Tablet Optimization",
+      title: "Automated Hedging",
       description:
-        "Dedicated tablet layouts, multi-window support, landscape mode optimization, and enhanced charting.",
-      icon: Tablet,
+        "Smart hedging algorithms that automatically manage exposure with liquidity providers based on your risk parameters.",
+      icon: RefreshCw,
     },
     {
-      title: "Offline Mode",
+      title: "Client Risk Profiling",
       description:
-        "View positions and history offline, queue orders for execution, and automatic sync when online.",
-      icon: Cloud,
+        "Automated client risk classification, dynamic leverage adjustment, and personalized risk limits.",
+      icon: Users,
     },
     {
-      title: "Widget Support",
+      title: "Stress Testing",
       description:
-        "Home screen widgets for quick account overview, watchlists, and market updates.",
-      icon: Monitor,
+        "Scenario analysis, market stress testing, and what-if simulations to prepare for extreme market conditions.",
+      icon: Target,
     },
     {
-      title: "Apple Watch App",
+      title: "Compliance Monitoring",
       description:
-        "Companion watchOS app for quick market checks, alerts, and position monitoring.",
+        "Regulatory compliance tracking, position limit enforcement, and automated reporting for authorities.",
+      icon: FileCheck,
+    },
+  ],
+};
+
+// Custom Tools Data
+export const customToolsData = {
+  title: "Custom Tools",
+  subtitle: "Bespoke Tools Tailored to Your Operations",
+  description:
+    "Custom-built trading tools and solutions designed specifically for your brokerage needs. From proprietary indicators to specialized trading platforms, we build what you need.",
+  heroIcon: Wrench,
+  keyFeatures: [
+    {
+      title: "Custom Development",
+      description:
+        "Tailored solutions built from scratch to match your exact specifications and business requirements.",
+      icon: Code,
+    },
+    {
+      title: "Platform Extensions",
+      description:
+        "Custom plugins, indicators, and expert advisors for MT4, MT5, and other trading platforms.",
+      icon: Package,
+    },
+    {
+      title: "API Development",
+      description:
+        "RESTful APIs, WebSocket feeds, and integration layers for connecting your systems and third-party tools.",
+      icon: GitBranch,
+    },
+    {
+      title: "Mobile Applications",
+      description:
+        "Native iOS and Android apps with custom features, branding, and seamless platform integration.",
+      icon: Smartphone,
+    },
+  ],
+  integrations: [
+    {
+      name: "Trading Platform APIs",
+      description: "Integration with MT4, MT5, cTrader, and proprietary platform APIs for custom functionality.",
       icon: Activity,
     },
     {
-      title: "Dark Mode",
+      name: "Data Providers",
+      description: "Connect to market data feeds, news services, and alternative data sources for enhanced tools.",
+      icon: Database,
+    },
+    {
+      name: "Cloud Infrastructure",
+      description: "Deploy custom tools on AWS, Azure, or Google Cloud with scalable architecture.",
+      icon: Cloud,
+    },
+    {
+      name: "Third-Party Services",
+      description: "Integrate with payment processors, KYC providers, and other external services.",
+      icon: Layers,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Proprietary Indicators",
       description:
-        "System-integrated dark mode, customizable themes, and eye-comfort settings.",
+        "Custom technical indicators and trading signals built to your specifications for competitive advantage.",
+      icon: LineChart,
+    },
+    {
+      title: "Automated Trading Systems",
+      description:
+        "Expert advisors, trading bots, and algorithmic trading systems with backtesting and optimization.",
+      icon: Cog,
+    },
+    {
+      title: "Admin Dashboards",
+      description:
+        "Custom management interfaces for monitoring operations, analytics, and business intelligence.",
+      icon: LayoutDashboard,
+    },
+    {
+      title: "White Label Solutions",
+      description:
+        "Fully branded custom tools with your company identity and tailored user experience.",
+      icon: Award,
+    },
+  ],
+};
+
+
+// Consulting Data
+export const consultingData = {
+  title: "Consulting",
+  subtitle: "Expert Advice Tailored for Your Growth Path",
+  description:
+    "Strategic consulting services for forex brokers and prop firms. From business planning to technology selection, our experts guide you through every stage of growth.",
+  heroIcon: MessageSquare,
+  keyFeatures: [
+    {
+      title: "Business Strategy",
+      description:
+        "Market analysis, competitive positioning, business model optimization, and growth strategy development.",
+      icon: Target,
+    },
+    {
+      title: "Technology Consulting",
+      description:
+        "Platform selection, infrastructure design, technology stack recommendations, and vendor evaluation.",
+      icon: Cog,
+    },
+    {
+      title: "Regulatory Guidance",
+      description:
+        "Licensing support, compliance framework setup, and regulatory strategy for multiple jurisdictions.",
+      icon: FileCheck,
+    },
+    {
+      title: "Operational Excellence",
+      description:
+        "Process optimization, workflow automation, team structure, and operational best practices.",
+      icon: Settings,
+    },
+  ],
+  integrations: [
+    {
+      name: "Market Research",
+      description: "Access to industry data, market trends, and competitive intelligence for informed decision-making.",
+      icon: BarChart3,
+    },
+    {
+      name: "Vendor Network",
+      description: "Connections to trusted technology providers, liquidity sources, and service partners.",
+      icon: Users,
+    },
+    {
+      name: "Regulatory Contacts",
+      description: "Network of legal advisors, compliance experts, and regulatory consultants worldwide.",
+      icon: Shield,
+    },
+    {
+      name: "Implementation Support",
+      description: "Hands-on assistance with technology deployment, process implementation, and team training.",
+      icon: Rocket,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Launch Planning",
+      description:
+        "Complete brokerage launch roadmap from concept to go-live including timelines, budgets, and milestones.",
+      icon: Rocket,
+    },
+    {
+      title: "M&A Advisory",
+      description:
+        "Merger and acquisition support, due diligence, valuation, and integration planning for brokerages.",
+      icon: Briefcase,
+    },
+    {
+      title: "Risk Assessment",
+      description:
+        "Comprehensive risk analysis, mitigation strategies, and risk management framework development.",
+      icon: Shield,
+    },
+    {
+      title: "Performance Optimization",
+      description:
+        "Operational audits, efficiency improvements, and cost optimization strategies for existing operations.",
+      icon: TrendingUp,
+    },
+  ],
+};
+
+// Regulations Data
+export const regulationsData = {
+  title: "Regulations",
+  subtitle: "Reliable Regulations for Uninterrupted Trading",
+  description:
+    "Comprehensive regulatory compliance solutions to keep your brokerage compliant across multiple jurisdictions. From licensing to ongoing compliance, we handle the complexity.",
+  heroIcon: FileCheck,
+  keyFeatures: [
+    {
+      title: "Licensing Support",
+      description:
+        "End-to-end assistance with obtaining forex broker licenses in major jurisdictions worldwide.",
+      icon: Award,
+    },
+    {
+      title: "Compliance Framework",
+      description:
+        "Complete compliance infrastructure including policies, procedures, and monitoring systems.",
+      icon: Shield,
+    },
+    {
+      title: "Regulatory Reporting",
+      description:
+        "Automated reporting systems for regulatory submissions, transaction reporting, and audit trails.",
+      icon: FileText,
+    },
+    {
+      title: "Ongoing Compliance",
+      description:
+        "Continuous monitoring, regulatory updates, and compliance management to maintain good standing.",
+      icon: CheckCircle2,
+    },
+  ],
+  integrations: [
+    {
+      name: "Regulatory Authorities",
+      description: "Direct reporting connections to FCA, CySEC, ASIC, and other regulatory bodies.",
+      icon: Building2,
+    },
+    {
+      name: "Compliance Tools",
+      description: "Integration with KYC/AML providers, transaction monitoring, and compliance software.",
+      icon: Shield,
+    },
+    {
+      name: "Legal Network",
+      description: "Access to specialized forex regulatory lawyers and compliance consultants globally.",
+      icon: Users,
+    },
+    {
+      name: "Audit Systems",
+      description: "Automated audit trail generation, document management, and compliance evidence collection.",
+      icon: FileText,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Multi-Jurisdiction Compliance",
+      description:
+        "Manage compliance across multiple regulatory regimes with centralized oversight and local expertise.",
+      icon: Globe,
+    },
+    {
+      title: "AML/KYC Programs",
+      description:
+        "Complete anti-money laundering and know-your-customer programs with automated screening and monitoring.",
+      icon: UserCheck,
+    },
+    {
+      title: "Client Fund Protection",
+      description:
+        "Segregated account management, client money rules compliance, and fund protection mechanisms.",
+      icon: Lock,
+    },
+    {
+      title: "Regulatory Technology",
+      description:
+        "RegTech solutions for automated compliance, real-time monitoring, and regulatory change management.",
+      icon: Cog,
+    },
+  ],
+};
+
+
+// Forex Copier Data
+export const forexCopierData = {
+  title: "Forex Copier",
+  subtitle: "Instantly Copy Trades Across Accounts",
+  description:
+    "Professional trade copying solution for forex brokers. Enable social trading, copy trading services, and PAMM/MAMM operations with our reliable and fast trade copier.",
+  heroIcon: Copy,
+  keyFeatures: [
+    {
+      title: "Real-Time Copying",
+      description:
+        "Ultra-low latency trade copying with sub-second execution across unlimited accounts and platforms.",
+      icon: Zap,
+    },
+    {
+      title: "Flexible Allocation",
+      description:
+        "Multiple allocation methods including lot-based, equity-based, balance-based, and custom formulas.",
       icon: Settings,
     },
     {
-      title: "Multi-Language",
+      title: "Risk Management",
       description:
-        "Support for 30+ languages with RTL support and localized content.",
+        "Per-follower risk controls, maximum drawdown limits, and automated stop-loss management.",
+      icon: Shield,
+    },
+    {
+      title: "Multi-Platform Support",
+      description:
+        "Copy trades between MT4, MT5, cTrader, and other platforms with full compatibility.",
+      icon: Layers,
+    },
+  ],
+  integrations: [
+    {
+      name: "MT4/MT5 Integration",
+      description: "Native integration with MetaTrader platforms for seamless trade copying and monitoring.",
+      icon: Activity,
+    },
+    {
+      name: "CRM Integration",
+      description: "Sync with your CRM for follower management, subscription billing, and performance tracking.",
+      icon: LayoutDashboard,
+    },
+    {
+      name: "Payment Processing",
+      description: "Automated subscription billing, profit sharing, and performance fee calculations.",
+      icon: DollarSign,
+    },
+    {
+      name: "Analytics Dashboard",
+      description: "Real-time performance metrics, copying statistics, and detailed reporting for traders and followers.",
+      icon: BarChart3,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Social Trading Platform",
+      description:
+        "Complete social trading infrastructure with trader rankings, performance stats, and follower marketplace.",
+      icon: Users,
+    },
+    {
+      title: "PAMM/MAMM Management",
+      description:
+        "Professional money management solutions with investor allocation, profit distribution, and reporting.",
+      icon: Wallet,
+    },
+    {
+      title: "Strategy Marketplace",
+      description:
+        "Allow traders to monetize their strategies with subscription models and performance-based fees.",
+      icon: Award,
+    },
+    {
+      title: "White Label Solution",
+      description:
+        "Fully branded copy trading platform with your company identity and custom features.",
       icon: Globe,
     },
   ],
 };
 
-// Bonus Manager Data
-export const bonusManagerData = {
-  title: "Bonus Manager",
-  subtitle: "Flexible Bonus Rules & Automated Payouts",
+// Dedicated Server Data
+export const dedicatedServerData = {
+  title: "Dedicated Server",
+  subtitle: "High-Speed, Secure Servers for MT4/MT5 Hosting",
   description:
-    "Create sophisticated bonus programs with flexible rules, tiered structures, automated calculations, and scheduled payouts to boost client acquisition and retention.",
-  heroIcon: Gift,
+    "Enterprise-grade dedicated servers optimized for forex trading platforms. Ultra-low latency, maximum uptime, and complete control for your trading infrastructure.",
+  heroIcon: Server,
   keyFeatures: [
     {
-      title: "Bonus Rule Engine",
+      title: "High Performance",
       description:
-        "Create complex bonus rules with conditions, eligibility criteria, time-based triggers, and volume requirements.",
-      icon: Settings,
+        "Latest generation processors, NVMe SSD storage, and high-speed network connections for optimal performance.",
+      icon: Zap,
     },
     {
-      title: "Tiered Programs",
+      title: "Maximum Uptime",
       description:
-        "Multi-tier bonus structures, VIP programs, loyalty rewards, progressive bonuses, and achievement-based incentives.",
-      icon: Award,
+        "99.99% uptime SLA with redundant power, network, and cooling systems in tier-3+ data centers.",
+      icon: CheckCircle2,
     },
     {
-      title: "Automated Calculations",
+      title: "DDoS Protection",
       description:
-        "Real-time bonus tracking, automatic credit/debit, withdrawal restrictions, and compliance with bonus terms.",
-      icon: DollarSign,
+        "Enterprise-grade DDoS mitigation and security measures to protect your trading infrastructure.",
+      icon: Shield,
     },
     {
-      title: "Payout Scheduling",
+      title: "Full Root Access",
       description:
-        "Flexible payout schedules, milestone-based releases, time-locked bonuses, and automated distribution.",
-      icon: Calendar,
+        "Complete server control with root access, custom configurations, and dedicated resources.",
+      icon: Lock,
     },
   ],
   integrations: [
     {
-      name: "Trading Platforms",
-      logo: "TP",
-      description: "Integration with MT4/MT5 and cTrader for bonus credit management.",
+      name: "Trading Platform Optimization",
+      description: "Pre-configured servers optimized for MT4, MT5, and other trading platforms with best practices.",
+      icon: Activity,
     },
     {
-      name: "Payment Systems",
-      logo: "PS",
-      description: "Automated bonus payouts via multiple payment methods and processors.",
+      name: "Backup Solutions",
+      description: "Automated daily backups, disaster recovery, and instant restore capabilities.",
+      icon: Database,
     },
     {
-      name: "CRM Integration",
-      logo: "CRM",
-      description: "Seamless integration with CRM for client segmentation and targeting.",
+      name: "Monitoring & Alerts",
+      description: "24/7 server monitoring with instant alerts for performance issues or downtime.",
+      icon: Bell,
     },
     {
-      name: "Analytics Tools",
-      logo: "AT",
-      description: "Bonus performance analytics and ROI tracking for marketing campaigns.",
-    },
-    {
-      name: "Compliance",
-      logo: "CP",
-      description: "Regulatory compliance tools for bonus terms and conditions.",
-    },
-    {
-      name: "Email Marketing",
-      logo: "EM",
-      description: "Automated bonus notifications and promotional campaigns.",
+      name: "Managed Services",
+      description: "Optional managed services including updates, security patches, and technical support.",
+      icon: HeadphonesIcon,
     },
   ],
   advancedSolutions: [
     {
-      title: "Cashback Programs",
+      title: "Load Balancing",
       description:
-        "Volume-based cashback, rebate structures, loyalty points, and automated calculations.",
-      icon: Percent,
+        "Distribute traffic across multiple servers for high availability and scalability.",
+      icon: Layers,
     },
     {
-      title: "Referral Bonuses",
+      title: "Global Locations",
       description:
-        "Multi-tier referral programs, friend-get-friend bonuses, and affiliate rewards.",
-      icon: Users,
+        "Data centers in major financial hubs worldwide for optimal latency to liquidity providers.",
+      icon: Globe,
     },
     {
-      title: "Contest Management",
+      title: "Custom Infrastructure",
       description:
-        "Trading competitions, leaderboards, prize distribution, and automated winner selection.",
-      icon: Award,
+        "Tailored server configurations, network architecture, and infrastructure design for your needs.",
+      icon: Cog,
     },
     {
-      title: "Credit Facilities",
+      title: "Disaster Recovery",
       description:
-        "Margin credit, leverage bonuses, trading credits, and flexible credit terms.",
-      icon: CreditCard,
-    },
-    {
-      title: "Withdrawal Controls",
-      description:
-        "Bonus withdrawal restrictions, volume requirements, time locks, and compliance checks.",
-      icon: Lock,
-    },
-    {
-      title: "Reporting Dashboard",
-      description:
-        "Comprehensive bonus analytics, cost tracking, ROI metrics, and performance insights.",
-      icon: BarChart3,
+        "Complete DR solutions with failover systems, geo-redundancy, and business continuity planning.",
+      icon: RefreshCw,
     },
   ],
 };
 
+
+// Backend Solutions Data
+export const backendSolutionsData = {
+  title: "Backend Solutions",
+  subtitle: "Custom Admin Panels and Integration Tools",
+  description:
+    "Powerful backend systems and admin panels for managing your forex brokerage operations. Custom-built solutions for complete control and operational efficiency.",
+  heroIcon: Cog,
+  keyFeatures: [
+    {
+      title: "Admin Dashboard",
+      description:
+        "Comprehensive management interface for monitoring all aspects of your brokerage operations in real-time.",
+      icon: LayoutDashboard,
+    },
+    {
+      title: "User Management",
+      description:
+        "Complete user administration with role-based access control, permissions, and activity logging.",
+      icon: Users,
+    },
+    {
+      title: "System Integration",
+      description:
+        "Connect all your systems including CRM, trading platforms, payment gateways, and third-party services.",
+      icon: Layers,
+    },
+    {
+      title: "Automation Engine",
+      description:
+        "Workflow automation, scheduled tasks, and event-driven processes to streamline operations.",
+      icon: RefreshCw,
+    },
+  ],
+  integrations: [
+    {
+      name: "API Gateway",
+      description: "Centralized API management for all your integrations with security, rate limiting, and monitoring.",
+      icon: Code,
+    },
+    {
+      name: "Database Management",
+      description: "Robust database architecture with optimization, backup, and data integrity controls.",
+      icon: Database,
+    },
+    {
+      name: "Microservices",
+      description: "Scalable microservices architecture for modular, maintainable, and flexible systems.",
+      icon: GitBranch,
+    },
+    {
+      name: "Cloud Infrastructure",
+      description: "Deploy on AWS, Azure, or Google Cloud with auto-scaling and high availability.",
+      icon: Cloud,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Custom Workflows",
+      description:
+        "Build custom business processes and workflows tailored to your specific operational requirements.",
+      icon: Settings,
+    },
+    {
+      title: "Reporting Engine",
+      description:
+        "Advanced reporting system with custom report builder, scheduled reports, and data exports.",
+      icon: FileText,
+    },
+    {
+      title: "Security Framework",
+      description:
+        "Enterprise-grade security with encryption, authentication, authorization, and audit trails.",
+      icon: Lock,
+    },
+    {
+      title: "Performance Monitoring",
+      description:
+        "Real-time system monitoring, performance metrics, and alerting for proactive issue resolution.",
+      icon: Gauge,
+    },
+  ],
+};
+
+// Social Trading Data
+export const socialTradingData = {
+  title: "Social Trading",
+  subtitle: "Enable Trade Sharing and Follower Systems",
+  description:
+    "Complete social trading platform allowing traders to share strategies and followers to copy successful traders. Build a thriving trading community and new revenue streams.",
+  heroIcon: Users,
+  keyFeatures: [
+    {
+      title: "Trader Profiles",
+      description:
+        "Comprehensive trader profiles with performance statistics, trading history, and risk metrics.",
+      icon: UserCheck,
+    },
+    {
+      title: "Copy Trading",
+      description:
+        "One-click copy trading with flexible allocation methods and risk management controls.",
+      icon: Copy,
+    },
+    {
+      title: "Performance Rankings",
+      description:
+        "Leaderboards and rankings based on returns, risk-adjusted performance, and follower satisfaction.",
+      icon: Award,
+    },
+    {
+      title: "Community Features",
+      description:
+        "Social feed, comments, discussions, and trader interactions to build an engaged community.",
+      icon: MessageSquare,
+    },
+  ],
+  integrations: [
+    {
+      name: "Trading Platform Sync",
+      description: "Real-time synchronization with MT4, MT5, and other platforms for instant trade copying.",
+      icon: Activity,
+    },
+    {
+      name: "Payment Integration",
+      description: "Automated subscription billing, profit sharing, and performance fee distribution.",
+      icon: DollarSign,
+    },
+    {
+      name: "Analytics Dashboard",
+      description: "Detailed analytics for traders and followers including performance metrics and statistics.",
+      icon: BarChart3,
+    },
+    {
+      name: "CRM Integration",
+      description: "Sync with your CRM for user management, marketing, and customer support.",
+      icon: LayoutDashboard,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Strategy Marketplace",
+      description:
+        "Monetization platform where traders can sell their strategies with subscription or performance-based pricing.",
+      icon: Award,
+    },
+    {
+      title: "Risk Management",
+      description:
+        "Advanced risk controls for followers including maximum drawdown, position limits, and stop-loss automation.",
+      icon: Shield,
+    },
+    {
+      title: "Mobile App",
+      description:
+        "Native mobile applications for iOS and Android with full social trading functionality.",
+      icon: Smartphone,
+    },
+    {
+      title: "Gamification",
+      description:
+        "Badges, achievements, challenges, and rewards to increase engagement and retention.",
+      icon: Target,
+    },
+  ],
+};
+
+// PAMM/MAMM Data
+export const pammMammData = {
+  title: "PAMM/MAMM",
+  subtitle: "Multi-Account Management Made Easy",
+  description:
+    "Professional money management solutions for forex brokers. Enable PAMM (Percentage Allocation Management Module) and MAMM (Multi-Account Manager Module) services for your clients.",
+  heroIcon: Wallet,
+  keyFeatures: [
+    {
+      title: "Investor Management",
+      description:
+        "Complete investor lifecycle management with allocation tracking, profit distribution, and reporting.",
+      icon: Users,
+    },
+    {
+      title: "Flexible Allocation",
+      description:
+        "Multiple allocation methods including equity-based, balance-based, and custom formulas.",
+      icon: Settings,
+    },
+    {
+      title: "Automated Profit Distribution",
+      description:
+        "Automatic profit/loss allocation to investors based on their share and performance fees.",
+      icon: DollarSign,
+    },
+    {
+      title: "Performance Tracking",
+      description:
+        "Real-time performance metrics, historical returns, and risk-adjusted performance indicators.",
+      icon: BarChart3,
+    },
+  ],
+  integrations: [
+    {
+      name: "MT4/MT5 Integration",
+      description: "Native integration with MetaTrader platforms for seamless PAMM/MAMM operations.",
+      icon: Activity,
+    },
+    {
+      name: "Payment Processing",
+      description: "Automated investor deposits, withdrawals, and performance fee calculations.",
+      icon: Wallet,
+    },
+    {
+      name: "Reporting System",
+      description: "Comprehensive reports for investors, managers, and regulatory compliance.",
+      icon: FileText,
+    },
+    {
+      name: "CRM Integration",
+      description: "Sync investor data, subscriptions, and communications with your CRM system.",
+      icon: LayoutDashboard,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Manager Marketplace",
+      description:
+        "Platform for investors to discover and invest with top-performing money managers.",
+      icon: Award,
+    },
+    {
+      title: "Risk Controls",
+      description:
+        "Investor-level risk limits, maximum drawdown protection, and automated stop-out mechanisms.",
+      icon: Shield,
+    },
+    {
+      title: "White Label Solution",
+      description:
+        "Fully branded PAMM/MAMM platform with your company identity and custom features.",
+      icon: Globe,
+    },
+    {
+      title: "Regulatory Compliance",
+      description:
+        "Built-in compliance features for regulatory reporting and investor protection requirements.",
+      icon: FileCheck,
+    },
+  ],
+};
+
+// Reporting Tools Data
+export const reportingToolsData = {
+  title: "Reporting Tools",
+  subtitle: "Advanced Analytics for Brokers and Traders",
+  description:
+    "Comprehensive reporting and analytics platform for forex brokers. Generate detailed reports, analyze performance, and gain insights into your brokerage operations.",
+  heroIcon: BarChart3,
+  keyFeatures: [
+    {
+      title: "Custom Report Builder",
+      description:
+        "Drag-and-drop report builder with customizable fields, filters, and visualizations.",
+      icon: FileText,
+    },
+    {
+      title: "Real-Time Analytics",
+      description:
+        "Live dashboards with real-time metrics, KPIs, and performance indicators for instant insights.",
+      icon: Gauge,
+    },
+    {
+      title: "Automated Reporting",
+      description:
+        "Schedule automated reports with email delivery, export options, and distribution lists.",
+      icon: RefreshCw,
+    },
+    {
+      title: "Data Visualization",
+      description:
+        "Interactive charts, graphs, and visualizations to understand trends and patterns.",
+      icon: PieChart,
+    },
+  ],
+  integrations: [
+    {
+      name: "Trading Platform Data",
+      description: "Pull data from MT4, MT5, and other platforms for comprehensive trading analytics.",
+      icon: Activity,
+    },
+    {
+      name: "CRM Data Integration",
+      description: "Combine CRM data with trading data for complete client and business intelligence.",
+      icon: LayoutDashboard,
+    },
+    {
+      name: "Financial Systems",
+      description: "Integrate with accounting, payment, and financial systems for complete reporting.",
+      icon: DollarSign,
+    },
+    {
+      name: "Export Options",
+      description: "Export reports to PDF, Excel, CSV, and other formats for sharing and analysis.",
+      icon: FileText,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Business Intelligence",
+      description:
+        "Advanced BI tools with predictive analytics, trend analysis, and forecasting capabilities.",
+      icon: TrendingUp,
+    },
+    {
+      title: "Compliance Reporting",
+      description:
+        "Automated regulatory reports, transaction reporting, and audit trail generation.",
+      icon: FileCheck,
+    },
+    {
+      title: "Client Reporting",
+      description:
+        "Branded client reports with performance summaries, trade history, and account statements.",
+      icon: Users,
+    },
+    {
+      title: "API Access",
+      description:
+        "RESTful API for programmatic access to reporting data and custom integrations.",
+      icon: Code,
+    },
+  ],
+};
+
+// VPS Hosting Data
+export const vpsHostingData = {
+  title: "VPS Hosting",
+  subtitle: "Reliable VPS for Uninterrupted Trading",
+  description:
+    "High-performance Virtual Private Servers optimized for forex trading. Ultra-low latency, 24/7 uptime, and pre-configured for MT4/MT5 and expert advisors.",
+  heroIcon: MonitorSmartphone,
+  keyFeatures: [
+    {
+      title: "Ultra-Low Latency",
+      description:
+        "VPS servers located near major liquidity providers and exchanges for minimal execution delays.",
+      icon: Zap,
+    },
+    {
+      title: "24/7 Uptime",
+      description:
+        "99.99% uptime guarantee with redundant systems and instant failover for continuous trading.",
+      icon: CheckCircle2,
+    },
+    {
+      title: "Pre-Configured Setup",
+      description:
+        "Ready-to-use VPS with MT4/MT5 pre-installed and optimized for expert advisors and trading bots.",
+      icon: Settings,
+    },
+    {
+      title: "Full Control",
+      description:
+        "Complete administrative access with ability to install custom software and configurations.",
+      icon: Lock,
+    },
+  ],
+  integrations: [
+    {
+      name: "Trading Platform Support",
+      description: "Optimized for MT4, MT5, cTrader, and other popular trading platforms.",
+      icon: Activity,
+    },
+    {
+      name: "Remote Desktop",
+      description: "Secure remote desktop access from any device with encrypted connections.",
+      icon: MonitorSmartphone,
+    },
+    {
+      name: "Backup & Recovery",
+      description: "Automated backups with one-click restore and disaster recovery options.",
+      icon: Database,
+    },
+    {
+      name: "24/7 Support",
+      description: "Round-the-clock technical support for VPS issues and configuration assistance.",
+      icon: HeadphonesIcon,
+    },
+  ],
+  advancedSolutions: [
+    {
+      title: "Global Locations",
+      description:
+        "VPS servers in multiple locations worldwide to minimize latency to your broker and liquidity providers.",
+      icon: Globe,
+    },
+    {
+      title: "Scalable Resources",
+      description:
+        "Easily upgrade CPU, RAM, and storage as your trading needs grow without downtime.",
+      icon: TrendingUp,
+    },
+    {
+      title: "DDoS Protection",
+      description:
+        "Enterprise-grade DDoS protection and security measures to keep your trading safe.",
+      icon: Shield,
+    },
+    {
+      title: "Managed Services",
+      description:
+        "Optional managed VPS with updates, monitoring, and optimization handled by our team.",
+      icon: Cog,
+    },
+  ],
+};
