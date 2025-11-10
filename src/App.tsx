@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import ForexCRM from "./pages/products/ForexCRM";
 import ForexWebdesign from "./pages/products/ForexWebdesign";
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/products/vps-hosting" element={<VpsHosting />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
