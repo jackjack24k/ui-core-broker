@@ -20,6 +20,7 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "About Us", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const products = [
@@ -149,9 +150,9 @@ const Header = () => {
                           </div>
                           <div className="flex-1">
                             <div className="font-medium text-foreground text-sm">{product.name}</div>
-                            <div className="text-xs text-muted-foreground mt-0.5 line-clamp-2">
+                            {/* <div className="text-xs text-muted-foreground mt-0.5 line-clamp-2">
                               {product.description}
-                            </div>
+                            </div> */}
                           </div>
                         </a>
                       </DropdownMenuItem>
