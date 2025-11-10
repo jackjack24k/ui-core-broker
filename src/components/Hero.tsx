@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="container mx-auto relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 text-primary text-sm font-medium mb-8 shadow-lg shadow-primary/10">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 text-primary text-sm font-medium mb-8 shadow-lg shadow-primary/10 animate-fade-in-up">
             <span className="flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-[1.1]">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-[1.1] animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             <span className="text-foreground">Enterprise-Grade </span>
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
               Broker Technology
@@ -35,31 +35,36 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl leading-relaxed">
-            Complete CRM, Traderroom, and Risk Management suite built for modern forex brokers. 
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            Complete CRM, Traderroom, and Risk Management suite built for modern forex brokers.
             <span className="text-foreground font-semibold"> Launch in days, not months.</span>
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <Button size="lg" className="text-base px-8 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all">
+          <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+            <Button size="lg" className="text-base px-8 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all hover:scale-105 group">
               Watch Overview
+              <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 border-border hover:border-primary/50 transition-all">
+            <Button size="lg" variant="outline" className="text-base px-8 border-border hover:border-primary/50 transition-all hover:scale-105">
               Explore Modules
             </Button>
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-border/50">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-border/50 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
             {[
               { label: "Active Brokers", value: "500+" },
               { label: "Daily Trades", value: "2M+" },
               { label: "Uptime", value: "99.9%" },
               { label: "Countries", value: "120+" }
-            ].map((stat) => (
-              <div key={stat.label} className="text-center md:text-left">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+            ].map((stat, index) => (
+              <div
+                key={stat.label}
+                className="text-center md:text-left group cursor-default hover:scale-110 transition-transform duration-300"
+                style={{ animationDelay: `${500 + index * 100}ms` }}
+              >
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>

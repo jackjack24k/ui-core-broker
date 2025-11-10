@@ -48,9 +48,7 @@ const HowItWorks = () => {
               <div key={index} className="relative">
                 <div className="text-center group">
                   {/* Glowing number badge */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-xl font-bold text-primary-foreground shadow-lg shadow-primary/30 z-10">
-                    {index + 1}
-                  </div>
+                  
                   
                   {/* Icon container */}
                   <div className="mb-8 inline-flex p-8 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border group-hover:border-primary/50 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-500 group-hover:-translate-y-2 relative overflow-hidden">

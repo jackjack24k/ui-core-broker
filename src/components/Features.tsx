@@ -31,13 +31,13 @@ const Features = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
+          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20 animate-fade-in-up">
             Platform Capabilities
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             Why Choose Start Broker Tech?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             Built by traders, for brokers. Everything you need to launch and scale your brokerage.
           </p>
         </div>
@@ -46,15 +46,20 @@ const Features = () => {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div 
+              <div
                 key={index}
-                className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10"
+                className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 animate-fade-in-up"
+                style={{ animationDelay: `${300 + index * 100}ms` }}
               >
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
+                {/* Floating particles */}
+                <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-primary/30 animate-float"></div>
+                <div className="absolute bottom-8 left-6 w-1.5 h-1.5 rounded-full bg-accent/30 animate-float" style={{ animationDelay: '1s' }}></div>
+
                 <div className="relative">
-                  <div className="mb-6 inline-flex p-4 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary group-hover:from-primary group-hover:to-accent group-hover:text-primary-foreground transition-all duration-500 shadow-lg group-hover:shadow-primary/50">
+                  <div className="mb-6 inline-flex p-4 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary group-hover:from-primary group-hover:to-accent group-hover:text-primary-foreground transition-all duration-500 shadow-lg group-hover:shadow-primary/50 group-hover:rotate-6 group-hover:scale-110">
                     <Icon size={28} strokeWidth={2} />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
