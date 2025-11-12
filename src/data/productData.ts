@@ -50,6 +50,7 @@ export const forexCrmData = {
   description:
     "Complete client lifecycle management tailored specifically for forex brokers. Manage clients, automate workflows, track performance, and deliver exceptional experiences with our comprehensive CRM solution.",
   heroIcon: LayoutDashboard,
+  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
   keyFeatures: [
     {
       title: "Client Management",
@@ -133,6 +134,7 @@ export const forexWebdesignData = {
   description:
     "Professional, high-converting websites designed specifically for forex brokers. Modern designs, optimized user experience, and seamless integration with your trading platforms and CRM.",
   heroIcon: Globe,
+  heroImage: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80",
   keyFeatures: [
     {
       title: "Conversion-Optimized Design",
@@ -217,6 +219,7 @@ export const forexLiquidityData = {
   description:
     "Access deep liquidity pools from multiple tier-1 providers. Competitive spreads, fast execution, and reliable connectivity to power your forex brokerage operations.",
   heroIcon: Droplet,
+  heroImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
   keyFeatures: [
     {
       title: "Multi-Provider Aggregation",
@@ -300,6 +303,7 @@ export const propFirmCrmData = {
   description:
     "Specialized CRM solution designed for prop trading firms. Manage traders, track performance, automate evaluations, and scale your prop firm operations efficiently.",
   heroIcon: Building2,
+  heroImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
   keyFeatures: [
     {
       title: "Trader Management",
@@ -376,7 +380,6 @@ export const propFirmCrmData = {
   ],
 };
 
-
 // Risk Management Data
 export const riskManagementData = {
   title: "Risk Management",
@@ -384,6 +387,7 @@ export const riskManagementData = {
   description:
     "Comprehensive risk management solutions to protect your brokerage. Real-time monitoring, automated controls, and advanced analytics to manage exposure and ensure operational stability.",
   heroIcon: Shield,
+  heroImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&q=80",
   keyFeatures: [
     {
       title: "Real-Time Monitoring",
@@ -467,6 +471,7 @@ export const customToolsData = {
   description:
     "Custom-built trading tools and solutions designed specifically for your brokerage needs. From proprietary indicators to specialized trading platforms, we build what you need.",
   heroIcon: Wrench,
+  heroImage: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80",
   keyFeatures: [
     {
       title: "Custom Development",
@@ -543,7 +548,6 @@ export const customToolsData = {
   ],
 };
 
-
 // Consulting Data
 export const consultingData = {
   title: "Consulting",
@@ -551,6 +555,7 @@ export const consultingData = {
   description:
     "Strategic consulting services for forex brokers and prop firms. From business planning to technology selection, our experts guide you through every stage of growth.",
   heroIcon: MessageSquare,
+  heroImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
   keyFeatures: [
     {
       title: "Business Strategy",
@@ -634,6 +639,7 @@ export const regulationsData = {
   description:
     "Comprehensive regulatory compliance solutions to keep your brokerage compliant across multiple jurisdictions. From licensing to ongoing compliance, we handle the complexity.",
   heroIcon: FileCheck,
+  heroImage: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80",
   keyFeatures: [
     {
       title: "Licensing Support",
@@ -710,7 +716,6 @@ export const regulationsData = {
   ],
 };
 
-
 // Forex Copier Data
 export const forexCopierData = {
   title: "Forex Copier",
@@ -718,6 +723,7 @@ export const forexCopierData = {
   description:
     "Professional trade copying solution for forex brokers. Enable social trading, copy trading services, and PAMM/MAMM operations with our reliable and fast trade copier.",
   heroIcon: Copy,
+  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
   keyFeatures: [
     {
       title: "Real-Time Copying",
@@ -801,6 +807,7 @@ export const dedicatedServerData = {
   description:
     "Enterprise-grade dedicated servers optimized for forex trading platforms. Ultra-low latency, maximum uptime, and complete control for your trading infrastructure.",
   heroIcon: Server,
+  heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80",
   keyFeatures: [
     {
       title: "High Performance",
@@ -885,6 +892,7 @@ export const backendSolutionsData = {
   description:
     "Powerful backend systems and admin panels for managing your forex brokerage operations. Custom-built solutions for complete control and operational efficiency.",
   heroIcon: Cog,
+  heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80",
   keyFeatures: [
     {
       title: "Admin Dashboard",
@@ -968,6 +976,7 @@ export const socialTradingData = {
   description:
     "Complete social trading platform allowing traders to share strategies and followers to copy successful traders. Build a thriving trading community and new revenue streams.",
   heroIcon: Users,
+  heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
   keyFeatures: [
     {
       title: "Trader Profiles",
@@ -1051,6 +1060,7 @@ export const pammMammData = {
   description:
     "Professional money management solutions for forex brokers. Enable PAMM (Percentage Allocation Management Module) and MAMM (Multi-Account Manager Module) services for your clients.",
   heroIcon: Wallet,
+  heroImage: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1200&q=80",
   keyFeatures: [
     {
       title: "Investor Management",
@@ -1134,6 +1144,7 @@ export const reportingToolsData = {
   description:
     "Comprehensive reporting and analytics platform for forex brokers. Generate detailed reports, analyze performance, and gain insights into your brokerage operations.",
   heroIcon: BarChart3,
+  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
   keyFeatures: [
     {
       title: "Custom Report Builder",
@@ -1217,6 +1228,7 @@ export const vpsHostingData = {
   description:
     "High-performance Virtual Private Servers optimized for forex trading. Ultra-low latency, 24/7 uptime, and pre-configured for MT4/MT5 and expert advisors.",
   heroIcon: MonitorSmartphone,
+  heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&q=80",
   keyFeatures: [
     {
       title: "Ultra-Low Latency",

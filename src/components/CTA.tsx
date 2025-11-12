@@ -58,7 +58,30 @@ const CTA = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
 
       <div className="container mx-auto relative z-10">
-        <div ref={cardRef} className="max-w-5xl mx-auto text-center p-12 md:p-16 rounded-3xl bg-gradient-to-br from-card via-card/95 to-card/50 border border-primary/30 shadow-2xl shadow-primary/10 backdrop-blur-sm relative overflow-hidden">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Image */}
+          <div ref={cardRef} className="relative rounded-3xl overflow-hidden border border-primary/30 shadow-2xl order-2 lg:order-1">
+            <img 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+              alt="Platform Dashboard"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
+            
+            {/* Floating stats cards on image */}
+            <div className="absolute bottom-8 left-8 p-4 rounded-xl bg-card/90 backdrop-blur-md border border-primary/30 shadow-xl">
+              <div className="text-sm text-muted-foreground mb-1">Active Traders</div>
+              <div className="text-2xl font-bold text-primary">12,458+</div>
+            </div>
+            
+            <div className="absolute top-8 right-8 p-4 rounded-xl bg-card/90 backdrop-blur-md border border-accent/30 shadow-xl">
+              <div className="text-sm text-muted-foreground mb-1">Trading Volume</div>
+              <div className="text-2xl font-bold text-accent">$2.4B+</div>
+            </div>
+          </div>
+
+          {/* Right Side - Content */}
+          <div className="text-center lg:text-left order-1 lg:order-2 relative">
           {/* Glowing orbs */}
           <div ref={orb1Ref} className="absolute -top-20 -right-20 w-64 h-64 bg-primary/20 rounded-full blur-[96px]"></div>
           <div ref={orb2Ref} className="absolute -bottom-20 -left-20 w-64 h-64 bg-accent/20 rounded-full blur-[96px]"></div>
@@ -82,11 +105,11 @@ const CTA = () => {
               </span>
             </h2>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">
               Join hundreds of brokers who've already made the switch. Schedule a demo or explore our sandbox environment.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center mb-12">
               <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 transition-all hover:scale-105 group border-0">
                 Book a Technical Call
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -99,7 +122,7 @@ const CTA = () => {
 
             {/* Trust indicators */}
             <div className="pt-8 border-t border-border/30">
-              <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+              <div className="flex flex-wrap lg:justify-start justify-center items-center gap-6 md:gap-8">
                 {[
                   { icon: Star, text: "99.9% Uptime" },
                   { icon: Sparkles, text: "24/7 Support" },
@@ -119,6 +142,7 @@ const CTA = () => {
                 })}
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

@@ -5,6 +5,8 @@ import {
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import CustomCursor from "../components/CustomCursor";
+import FAQ from "../components/FAQ";
 
 const aboutFeatures = [
   {
@@ -91,8 +93,36 @@ const expertTeam = [
 ];
 
 export default function AboutUs() {
+  const faqItems = [
+    {
+      question: "What makes your company different from other tech providers?",
+      answer: "We specialize exclusively in forex and financial technology, bringing deep industry expertise that generic tech companies lack. Our solutions are purpose-built for brokers, prop firms, and financial institutions, with features and workflows designed specifically for this industry."
+    },
+    {
+      question: "How long have you been in the forex technology industry?",
+      answer: "Our team has over 10 years of combined experience in forex technology, having worked with hundreds of brokers worldwide. We've seen the industry evolve and continuously adapt our solutions to meet changing market demands and regulatory requirements."
+    },
+    {
+      question: "Do you work with startups or only established brokers?",
+      answer: "We work with both! We help startups launch with cost-effective packages and guide established brokers through scaling and modernization. Our flexible approach means we can support businesses at any stage of growth."
+    },
+    {
+      question: "What is your company's approach to innovation?",
+      answer: "Innovation is at our core. We invest heavily in R&D, constantly exploring emerging technologies like AI, blockchain, and cloud computing. We also listen closely to client feedback and market trends to ensure our solutions stay ahead of the curve."
+    },
+    {
+      question: "Can you share client success stories?",
+      answer: "We've helped dozens of brokers achieve significant growth. Our clients report 40% reduction in operational costs, 60% faster onboarding times, and improved client retention. We're happy to provide case studies and client references upon request."
+    },
+    {
+      question: "How do you ensure quality in your deliverables?",
+      answer: "Quality assurance is built into every stage of our process. We follow agile methodologies, conduct thorough testing, perform security audits, and gather client feedback throughout development. Every project includes a dedicated QA team and comprehensive testing before launch."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
+      <CustomCursor />
       <Header />
       <main className="pt-16">
         {/* Hero Section */}
@@ -351,6 +381,11 @@ export default function AboutUs() {
             </div>
           </div>
         </section>
+        <FAQ 
+          items={faqItems}
+          title="About Us - FAQ"
+          subtitle="Learn more about our company and how we can help you"
+        />
       </main>
       <Footer />
     </div>

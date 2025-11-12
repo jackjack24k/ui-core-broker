@@ -5,6 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
+import FAQ from "@/components/FAQ";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +14,33 @@ const ContactUs = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+  
+  const faqItems = [
+    {
+      question: "What's the best way to reach you?",
+      answer: "For urgent matters, call us directly. For general inquiries, use our contact form or email us. We typically respond to emails within 2-4 hours during business hours. For technical support, we offer 24/7 availability through our support portal."
+    },
+    {
+      question: "Do you offer free consultations?",
+      answer: "Yes! We provide free 30-minute consultation calls to understand your needs and discuss how we can help. During this call, we'll assess your requirements, answer questions, and provide initial recommendations at no cost."
+    },
+    {
+      question: "What information should I include in my inquiry?",
+      answer: "Please include your business type (startup/established broker), current challenges, desired solutions, timeline, and budget range. The more details you provide, the better we can tailor our response and recommendations."
+    },
+    {
+      question: "How quickly can you start a project after contact?",
+      answer: "After initial consultation and agreement, we can typically start within 1-2 weeks. Rush projects can be accommodated with expedited onboarding. Timeline depends on project complexity and our current workload."
+    },
+    {
+      question: "Can I schedule a demo of your products?",
+      answer: "Absolutely! We offer live demos of all our products. You can schedule a personalized demo through our contact form or by calling us directly. Demos typically last 30-45 minutes and can be customized to your specific interests."
+    },
+    {
+      question: "Do you have offices I can visit?",
+      answer: "Yes, we welcome in-person visits to our main office. Please schedule an appointment in advance to ensure our team is available. We can also arrange video calls if in-person meetings aren't convenient."
+    }
+  ];
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -87,6 +116,7 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <CustomCursor />
       <Header />
       
       {/* Hero Section */}
@@ -301,10 +331,15 @@ const ContactUs = () => {
         </div>
       </section>
 
+      <FAQ 
+        items={faqItems}
+        title="Contact FAQ"
+        subtitle="Quick answers about getting in touch with us"
+      />
+
       <Footer />
     </div>
   );
 };
 
 export default ContactUs;
-
